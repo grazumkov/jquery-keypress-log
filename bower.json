@@ -1,0 +1,10 @@
+{
+  "name": "jquery-keypress-log",
+  "version": "1.0.0",
+  "dependencies": {},
+  "devDependencies": {
+    "qunit": "~1.12.0",
+    "jquery": "latest",
+    "skeleton": "skeleton-css#~2.0.4"
+  }
+}
