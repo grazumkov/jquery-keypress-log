@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+        <meta charset="utf-8">
+        <title>jQuery KeyPressLog Plugin Demo</title>
+        <meta name="description" content="jQuery KeyPressLog Plugin Demo">
+		<meta name="keywords" content="jquery,jeypress,plugin">
+        <meta name="author" content="xtratio">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <link href="http://fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/skeleton.css">
+        <style>
+            body{
+                padding-top: 100px;
+            }
+            textarea{
+                resize: none;
+                min-height: 200px;
+            }    
+        </style>
+	</head>
+	<body>
+        <div class="container">
+            <div class="row">
+                <div class="tvelve columns">
+                    <h2>jQuery KeyPressLog Plugin Demo</h2>
+                    <form>
+                        <input class="u-full-width" type="text" id="element" placeholder="Enter something..."/>
+                        <label for="logOutput">Log:</label>
+                        <textarea class="u-full-width" id="logOutput" readonly disabled></textarea>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <script src="js/jquery.min.js"></script>
+        <script src="js/jquery.keypress-log.min.js"></script>
+        <script>
+            $( function() {
+                $("#element").keyPressLog();
+                $("#element").on('logChanged.keyPressLog', function (e, data) {
+                    $("#logOutput").text(data.log);
+                });
+            });
+        </script>
+	</body>
+</html>

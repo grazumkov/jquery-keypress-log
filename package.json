@@ -1,0 +1,26 @@
+{
+  "name": "keypress-log-ghpages",
+  "version": "1.0.0",
+  "description": "jQuery Keypress log plugin project page",
+  "keywords": [
+    "jquery-plugin",
+    "keypress",
+    "log",
+    "plugins"
+  ],
+  "author": {
+    "name": "xtratio",
+    "email": "extremumratio@gmail.com",
+    "url": "https://github.com/xtratio"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/xtratio/jquery-keypress-log.git"
+  },
+  "license": "MIT",
+  "scripts": {
+    "test": "grunt"
+  },
+  "devDependencies": {
+  }
+}
