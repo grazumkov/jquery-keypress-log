@@ -51,7 +51,7 @@
                        var sym = getChar(event);
                        if(sym !== null){
                            
-                           var logEvent = $.Event('logChange.xt.'+pluginName);
+                           var logEvent = $.Event('logChange.'+pluginName);
                            self.$element.trigger(logEvent, { char: sym });
                            if (logEvent.isDefaultPrevented()) { return; }
                            
@@ -62,23 +62,23 @@
                                 self._keysLog+=sym;
                            }
                        
-                           var logEndEvent = $.Event('logChanged.xt.'+pluginName);
+                           var logEndEvent = $.Event('logChanged.'+pluginName);
                            self.$element.trigger(logEndEvent, {char: sym, log: self._keysLog });
                        } 
                     });
 			},
             destroy: function(){
                 this.$element.off("keypress."+pluginName);
-                this.$element.data('xt.'+pluginName, null);
+                this.$element.data(pluginName, null);
             }
 		} );
 
 		$.fn[ pluginName ] = function( option ) {
 			this.each( function() {
                 var $this = $(this);
-                var data = $this.data('xt.'+pluginName );
+                var data = $this.data(pluginName );
 				if ( !data ) {
-					$this.data('xt.'+pluginName, (data = new KeyPressLog( this, typeof option === 'object' &&  option)));
+					$this.data(pluginName, (data = new KeyPressLog( this, typeof option === 'object' &&  option)));
 				}
                 if (typeof option === 'string' && !option.startsWith("_")) {      
                     data[option].call(data);

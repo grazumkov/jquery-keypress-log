@@ -39,7 +39,7 @@
         <script>
             $( function() {
                 $("#element").keyPressLog();
-                $("#element").on('logChanged.xt.keyPressLog', function (e, data) {
+                $("#element").on('logChanged.keyPressLog', function (e, data) {
                     $("#logOutput").text(data.log);
                 });
             });

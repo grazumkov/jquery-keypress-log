@@ -27,15 +27,18 @@ In your web page:
 Get log data:
 
 ```javascript
-    var inputLog = $('inputSelector').data('xt.keyPressLog').get();
+    var inputLog = $('inputSelector').data('keyPressLog').get();
 ```
 Subscribe to log event:
 
 ```javascript
-     $("inputSelector").on('logChanged.xt.keyPressLog', function (e, data) {
+     $("inputSelector").on('logChanged.keyPressLog', function (e, data) {
         console.log(data.log); // write current log data to console
      });
 ```
+
+## Contributing
+See [contributing page](contributing.md)
 
 ## License
 
